@@ -18,10 +18,6 @@ services:
    replicas: 1
    restart_policy:
     condition: any
-   placement:
-    constraints:
-     - node.role == worker
-     - node.labels.xwiki-data == true
  db:
   image: "mysql:5.7"
   volumes:
@@ -39,12 +35,9 @@ services:
    replicas: 1
    restart_policy:
     condition: any
-   placement:
-    constraints:
-     - node.role == worker
-  configs: 
-   - source: mysql-config
-   - target: /etc/mysql/conf.d/xwiki.cnf
+       #configs: 
+       #- source: mysql-config
+       #- target: /etc/mysql/conf.d/xwiki.cnf
 volumes:
  mysql-data:
  xwiki-data:
@@ -58,10 +51,10 @@ secrets:
  xwiki-db-root-password:
   external:
    name: xwiki-db-root-password
-configs:
- mysql-config:
-  external:
-   name: xwiki-mysql-config
+   #configs:
+   #mysql-config:
+   #external:
+   #name: xwiki-mysql-config
 #echo xwiki | docker secret create xwiki-db-username -
 #echo $(openssl rand -base64 32|tr -d '+=/'|fold -w 16|head -1)|docker secret create xwiki-db-password -
 #echo $(openssl rand -base64 32|tr -d '+=/'|fold -w 16|head -1)|docker secret create xwiki-db-root-password -
