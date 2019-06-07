@@ -3,7 +3,7 @@ services:
  nginx:
   image: secobau/nginx-autoindex
   ports:
-   - "8081:80"
+   - "80:80"
   volumes:
    - qrloop:/usr/share/nginx/html
   deploy:
