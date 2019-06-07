@@ -2,3 +2,4 @@ docker image build --tag helloweb https://github.com/secobau/openshift/raw/maste
 docker image ls
 docker image history helloweb
 docker container run --publish 8080:8080 --detach helloweb
+docker container logs helloweb --follow
