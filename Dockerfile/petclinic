@@ -2,7 +2,7 @@ FROM alpine/git AS clone
 WORKDIR /app
 RUN git clone https://github.com/spring-projects/spring-petclinic.git 
 
-FROM maven:jdk-alpine AS build
+FROM maven:alpine AS build
 WORKDIR /app
 COPY --from=clone /app/spring-petclinic /app 
 RUN mvn install 
