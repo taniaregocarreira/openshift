@@ -16,7 +16,7 @@
     1. Git Repository URL: 
         - https://github.com/**secobau**/spring-petclinic (your username in Github)
     1. Git Reference:
-        - **master** (then name of the branch in the Github project)
+        - **master** (the name of the branch in the Github project)
     1. Context Directory:
         - Leave it empty
     1. Finally create the application:
