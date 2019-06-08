@@ -1,3 +1,5 @@
+# PETCLINIC EXERCISE WITH OPENSHIFT ONLINE
+
 1. Clone this project to your Github account:
     - https://github.com/spring-projects/spring-petclinic
 1. Create two other branches in the project:
