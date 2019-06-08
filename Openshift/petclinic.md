@@ -1,4 +1,4 @@
-# PETCLINIC EXERCISE WITH OPENSHIFT ONLINE
+# PETCLINIC: Exercise with Github and Openshift Online
 
 1. Login to your Gihub account
     1. Fork this project:
