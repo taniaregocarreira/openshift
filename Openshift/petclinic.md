@@ -1,21 +1,22 @@
 1. Clone this project to your Github account:
     - https://github.com/spring-projects/spring-petclinic
-1. Create two other branches in the project: 
+1. Create two other branches in the project:
+    - master (already created in the project)
     - develop
-    - secobau (your username in Github)
+    - **secobau** (your username in Github)
 1. Create three projects in Openshift Online:
     - petclinic-master
     - petclinic-develop
-    - petclinic-secobau (your username in Github)
-1. From inside project petclinic-master:
+    - petclinic-**secobau** (your username in Github)
+1. From inside project petclinic-**master**:
     1. Add a new Java application from the catalog:
         - OpenJDK
     1. Application Name: 
-        - petclinic-master
+        - petclinic-**master**
     1. Git Repository URL: 
-        - https://github.com/secobau/spring-petclinic (your username in Github)
+        - https://github.com/**secobau**/spring-petclinic (your username in Github)
     1. Git Reference:
-        - master (then name of the branch in the Github project)
+        - **master** (then name of the branch in the Github project)
     1. Context Directory:
         - Leave it empty
     1. Finally create the application:
@@ -33,4 +34,4 @@
     1. Go to the Overview page and check the status of your project
 1. Repeat all the steps of the previous paragraph for the other two branches:
     - develop
-    - secobau (your username in Github)
+    - **secobau** (your username in Github)
