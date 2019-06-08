@@ -9,28 +9,34 @@
     - petclinic-develop
     - petclinic-**secobau** (your username in Github)
 1. From inside project petclinic-**master**:
-    1. Add a new Java application from the catalog:
-        - OpenJDK
-    1. Application Name: 
-        - petclinic-**master**
-    1. Git Repository URL: 
-        - https://github.com/**secobau**/spring-petclinic (your username in Github)
-    1. Git Reference:
-        - **master** (the name of the branch in the Github project)
-    1. Context Directory:
-        - Leave it empty
-    1. Finally create the application:
-        - Create
-    1. Go to the Builds page and select the corresponding build for your new application:
-        - petclinic-master
-    1. Go to the Configuration tab and copy the GitHub Webhook URL
-    1. Go to your Github project and navigate to the Settings tab and then Webhooks and then Add webhook
+    1. Add a new application from the catalog:
+        - Application type:
+            - OpenJDK
+        - Application Name: 
+            - petclinic-**master**
+        - Git Repository URL: 
+            - https://github.com/**secobau**/spring-petclinic (your username in Github)
+        - Git Reference:
+            - **master** (the name of the branch in the Github project)
+        - Context Directory:
+            - Leave it empty
+    1. Go to Applications -> Deployments
+        1. Select the corresponding deployment:
+            - petclinic-master
+        1. Click on the Actions selector to the upper right of the page and select:
+            - Edit Resource Limits
+        1. Edit the Memory limit:
+            - 256 MiB        
+    1. Go to Builds -> Builds
+        1. Select the corresponding deployment:
+            - petclinic-master
+        1. Go to the Configuration tab and copy the following value:
+            - GitHub Webhook URL
+    1. Go to your project on Github and navigate to Settings -> Webhooks -> Add webhook
         - Payload URL:
             - Paste your Github Webhook URL
         - Content type:
             - application/json
-        - Finally add the webhook:
-            - Add webhook
     1. Go to the Overview page and check the status of your project
 1. Repeat all the steps of the previous paragraph for the other two branches:
     - develop
