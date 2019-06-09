@@ -7,7 +7,7 @@
         - develop
 1. Login to your Openshift Online account:
     1. Create a new project in Openshift Online:
-        - develop
+        - playground
     1. Add a new Application from the Catalog:
         - Application type:
             - OpenJDK
@@ -16,7 +16,7 @@
         - Git Repository URL: 
             - https://github.com/USERNAME/spring-petclinic (your username in Github)
         - Git Reference:
-            - **develop** (the name of the branch in the Github project)
+            - develop
         - Context Directory:
             - Leave it empty
          - Labels -> app:
@@ -43,12 +43,12 @@
 1. Change the code in Github:
     1. Go to your fork of the project:
         - https://github.com/USERNAME/spring-petclinic (your username in Github)
-    1. Checkout to the **develop** branch
+    1. Checkout to the develop branch
     1. Navigate to the following resource:
         - https://github.com/USERNAME/spring-petclinic/blob/develop/src/main/resources/templates/welcome.html (your username in Github)
     1. Modify the existing code:
         - Delete line number 7
-    1. Instead of committing directly the changes to the **develop** branch:
+    1. Instead of committing directly the changes to the develop branch:
         - Create a new branch for this commit and start a pull request
         - Propose file change
         - Create pull request
