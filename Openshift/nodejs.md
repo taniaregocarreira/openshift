@@ -16,7 +16,7 @@
         - Git Repository URL: 
             - https://github.com/USERNAME/nodejs-ex (your username in Github)
         - Git Reference:
-            - **develop** (the name of the branch in the Github project)
+            - develop (the name of the branch in the Github project)
         - Context Directory:
             - Leave it empty
         - Labels -> app:
@@ -84,12 +84,12 @@
 1. Change the code in Github:
     1. Go to your fork of the project:
         - https://github.com/USERNAME/nodejs-ex (your username in Github)
-    1. Checkout to the **develop** branch
+    1. Checkout to the develop branch
     1. Navigate to the following resource:
         - https://github.com/USERNAME/nodejs-ex/blob/playground/views/index.html (your username in Github)
     1. Modify the existing code:
         - Delete line number 219
-    1. Instead of committing directly the changes to the **develop** branch:
+    1. Instead of committing directly the changes to the develop branch:
         - Create a new branch for this commit and start a pull request
         - Propose file change
         - Create pull request
@@ -97,10 +97,10 @@
         - Confirm merge
         - Delete branch
 1. Verify the changes in Openshift Online:
-    1. Go to your **playground** project
+    1. Go to your playground project
     1. Go to Overview -> nodejs
         - Visit the URL of the application
-1. Promote the changes to the **master** branch:
+1. Promote the changes to the master branch:
     1. Go to your fork of the project:
         - https://github.com/USERNAME/nodejs-ex (your username in Github)
     1. Navigate to the following resource:
@@ -115,7 +115,7 @@
         - Merge pull request
         - Confirm merge
 1. Verify the changes in Openshift Online:
-    1. Go to your **production** project
+    1. Go to your production project
     1. Go to Builds -> Pipelines:
         - Input Required
         - Log in with OpenShift
