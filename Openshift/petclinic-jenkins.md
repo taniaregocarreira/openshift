@@ -39,7 +39,7 @@
     1. Add a new Application to your project:
         - Import YAML/JSON
         - Copy and paste the code from this page:
-            - https://raw.githubusercontent.com/secobau/openshift/master/Openshift/nodejs.yaml
+            - https://raw.githubusercontent.com/secobau/openshift/master/Openshift/petclinic.yaml
         - Process the template
         - Name:
             - petclinic
