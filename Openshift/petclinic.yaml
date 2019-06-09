@@ -135,7 +135,6 @@ objects:
       to:
         kind: ImageStreamTag
         name: ${NAME}:latest
-    postCommit: {}
     source:
       contextDir: ${CONTEXT_DIR}
       git:
@@ -159,6 +158,8 @@ objects:
 - apiVersion: v1
   kind: Service
   metadata:
+    annotations:
+      service.alpha.openshift.io/dependencies: '[{"name": "${NAME}", "namespace": "", "kind": "Service"}]'
     name: ${NAME}-blue
   spec:
     ports:
@@ -186,6 +187,9 @@ objects:
         name: ${NAME}-blue
       spec:
         containers:
+        - env:
+          - name: DATABASE_SERVICE_NAME
+            value: ${NAME}
           image: ' '
           name: petclinic
           ports:
@@ -214,6 +218,8 @@ objects:
 - apiVersion: v1
   kind: Service
   metadata:
+    annotations:
+      service.alpha.openshift.io/dependencies: '[{"name": "${NAME}", "namespace": "", "kind": "Service"}]'
     name: ${NAME}-green
   spec:
     ports:
@@ -241,6 +247,9 @@ objects:
         name: ${NAME}-green
       spec:
         containers:
+        - env:
+          - name: DATABASE_SERVICE_NAME
+            value: ${NAME}
           image: ' '
           name: petclinic
           ports:
@@ -272,7 +281,7 @@ parameters:
   name: NAME
   required: true
   value: petclinic
-- description: The exposed hostname that will route to the service, if left
+- description: The exposed hostname that will route to the Node.js service, if left
     blank a value will be defaulted.
   displayName: Application Hostname
   name: APPLICATION_DOMAIN
@@ -286,7 +295,7 @@ parameters:
   name: SOURCE_REPOSITORY_REF
   required: true
   value: master
-- description: Maximum amount of memory the container can use.
+- description: Maximum amount of memory the Node.js container can use.
   displayName: Memory Limit
   name: MEMORY_LIMIT
   required: true
@@ -305,7 +314,7 @@ parameters:
   from: '[a-zA-Z0-9]{40}'
   generate: expression
   name: GENERIC_WEBHOOK_SECRET
-- description: The OpenShift Namespace where the ImageStreams reside.
+- description: The OpenShift Namespace where the NodeJS and MongoDB ImageStreams reside.
   displayName: Namespace
   name: NAMESPACE
   required: true
