@@ -1,0 +1,11 @@
+oc new-app https://github.com/secobau/phpinfo
+oc logs bc/phpinfo --follow
+oc status
+oc status --suggest
+oc describe dc/phpinfo
+oc expose svc/phpinfo
+oc get all
+oc get pods
+oc describe service/phpinfo
+oc set probe dc/phpinfo --liveness -- echo ok
+oc set probe dc/phpinfo --readiness --get-url=http://:8080/
