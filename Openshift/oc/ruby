@@ -1,0 +1,2 @@
+oc new-app https://github.com/openshift/ruby-hello-world -o yaml 1>myapp.yaml
+vi myapp.yaml
