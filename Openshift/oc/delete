@@ -1,1 +1,1 @@
-./oc.exe delete route $(./oc get route -o name|cut -d/ -f2)
+./oc delete route $(./oc get route -o name|cut -d/ -f2)
